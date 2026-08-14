@@ -1,0 +1,4 @@
+import SiteHeader from "../../components/SiteHeader";import SiteFooter from "../../components/SiteFooter";
+const models=["3-Statement Models","Driver-Based Models","Budget & Forecast Models","Scenario Models","Sensitivity Analysis","Valuation Models"];
+export const metadata={title:"Models — Financial Analysis & Modeling",description:"Practical financial models, assumptions, methods, and supporting files."};
+export default function Models(){return <main><SiteHeader/><header className="page-intro shell"><p className="eyebrow">Model library</p><h1>Models</h1><p className="lede">Practical models designed to make assumptions, operating logic, and decision implications transparent.</p></header><section className="cap-grid shell">{models.map((x,i)=><article key={x}><span>0{i+1}</span><h2>{x}</h2><p>Methodology and supporting files will be published with completed case studies.</p></article>)}</section><SiteFooter/></main>}

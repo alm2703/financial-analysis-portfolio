@@ -1,0 +1,2 @@
+import type { Entry } from "../lib/content";
+export default function ProjectList({projects}:{projects:Entry[]}){return <div className="project-list">{projects.map(p=><a className="project" href={`/projects/${p.slug}`} key={p.slug}><span className="num">{p.number}</span><div><h2>{p.title}</h2><p>{p.subtitle}</p></div><span className={`status ${p.status==="In Progress"?"live":""}`}>{p.status}</span><span className="arrow">↗</span></a>)}</div>}

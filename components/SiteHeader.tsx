@@ -1,0 +1,3 @@
+"use client";
+import { useEffect, useState } from "react";
+export default function SiteHeader(){const [dark,setDark]=useState(false);useEffect(()=>{const v=localStorage.getItem("theme")==="dark";setDark(v);document.documentElement.dataset.theme=v?"dark":"light"},[]);function toggle(){const v=!dark;setDark(v);document.documentElement.dataset.theme=v?"dark":"light";localStorage.setItem("theme",v?"dark":"light")};return <nav className="nav shell"><a className="wordmark" href="/">FA<span>/</span>MP</a><div className="navlinks"><a href="/projects">Projects</a><a href="/analysis">Analysis</a><a href="/models">Models</a><a href="/data">Data</a><a href="/about">About</a><button onClick={toggle} aria-label="Toggle color theme">{dark?"Light":"Dark"}</button></div></nav>}
